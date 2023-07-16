@@ -1,0 +1,23 @@
+package fileuploaddemo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.Test;
+
+public class FileuploadDemo1 
+{
+@Test
+public void fileuploadDemo1()
+{
+	WebDriver driver=new EdgeDriver();
+	driver.get("file:///C:/Users/USER/Downloads/FileUploadDemo1%20(1).html");
+	WebElement element=driver.findElement(By.xpath("//input[@id='RBG']"));
+	element.sendKeys("C:\\Users\\USER\\Desktop\\seleniumdemo\\screenshots");
+	System.out.println(element);
+	
+}
+
+}
